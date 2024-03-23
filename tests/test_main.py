@@ -9,7 +9,7 @@ URL = "https://postcard.qa.studio/"
 
 def test_ground(browser: WebDriver):
     """
-    SL-1. Launch test
+    SL-1. Smoke test
     """
 
     browser.get(URL)
