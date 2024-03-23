@@ -4,6 +4,7 @@
 import time
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
+import pytest
 
 URL = "https://postcard.qa.studio/"
 
@@ -18,6 +19,7 @@ def test_ground(browser: WebDriver):
     assert button.text == "Отправить", "Unexpected text on button"
 
 
+#@pytest.mark.xfail(reason="Wait for fix bug")
 def test_empty_input_send(browser: WebDriver):
     """
     SL-2. Negative case
